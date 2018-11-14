@@ -1,5 +1,4 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
 
 version = '1.0'
 jar {
@@ -28,4 +27,21 @@ uploadArchives {
            dirs 'repos'
        }
     }
+}
+
+task task1 {
+    doLast {
+        println "This is a new task."
+  }
+}
+
+task task2 (dependsOn: 'task1') {
+    doLast {
+        println "This is another task."
+    }
+}
+task task3(type: Exec){
+    commandLine 'cdm','/c','git status'
+
+
 }
