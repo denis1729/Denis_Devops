@@ -10,7 +10,6 @@ services:
   gocd_server:
     image: "registry.jala.info/devops/gocd/gocd-server:v18.5.0"
     ports:
-      - "8153:8153"
       - "8154:8154"
     volumes:
       - ./godata_server:/godata
@@ -28,4 +27,3 @@ services:
     image: "registry.jala.info/devops/sonarqube:6.7.4-alpine"
     ports:
       - "9000:9000"
-
