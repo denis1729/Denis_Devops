@@ -1,4 +1,10 @@
+plugins {
+  id "org.sonarqube" version "2.6.2"
+  id "org.owasp.dependencycheck" version "3.3.4"
+}
+
 apply plugin: 'java'
+apply plugin: 'jacoco'
 
 version = '1.0'
 jar {
@@ -45,3 +51,11 @@ task task3(type: Exec){
 
 
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+ check.dependsOn jacocoTestReport
