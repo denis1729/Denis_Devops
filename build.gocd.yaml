@@ -56,4 +56,4 @@ pipelines:
                     working_directory: quickstart
                     command: ./gradlew
                     arguments:
-                      - dependencyCheckAnalize
+                      - dependencyCheckAnalyze
