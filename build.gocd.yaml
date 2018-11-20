@@ -57,3 +57,7 @@ pipelines:
                     command: ./gradlew
                     arguments:
                       - dependencyCheckAnalyze
+              artifacts:
+                - build:
+                    source: quickstart/build/reports/**/*
+                    destination: html
