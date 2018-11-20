@@ -50,3 +50,11 @@ pipelines:
                     command: ./gradlew
                     arguments:
                       - sonarqube
+          jobs:  
+            Owasp:
+              tasks:
+                - exec:
+                    working_directory: quickstart
+                    command: ./gradlew
+                    arguments:
+                      - dependencyCheckAnalize
