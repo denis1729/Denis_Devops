@@ -49,8 +49,7 @@ pipelines:
                     working_directory: quickstart
                     command: ./gradlew
                     arguments:
-                      - sonarqube
-          jobs:  
+                      - sonarqube  
             Owasp:
               tasks:
                 - exec:
