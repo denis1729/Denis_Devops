@@ -61,3 +61,5 @@ pipelines:
                 - build:
                     source: quickstart/build/reports/**/*
                     destination: html
+              tabs:
+                OWASP: html/dependency-check-report.html
