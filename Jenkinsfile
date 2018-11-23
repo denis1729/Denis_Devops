@@ -33,7 +33,8 @@ pipeline{
           steps{
                 echo 'Runnig unit test'
                 sh './webapplication/gradlew test -p webapplication'
-                junit '**/reports/tests/test/*.html'
+                junit '**/test-results/test/*.xml
+                archiveArtifacts artifacts: '**/reports/tests/test/*.html'
                   }
                 }
 
